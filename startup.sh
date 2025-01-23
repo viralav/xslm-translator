@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 # Run Streamlit app
 echo "Running Streamlit app..."
-python run.py
+python ./src/run.py
 
 # Deactivate virtual environment (optional)
 # deactivate
