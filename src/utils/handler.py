@@ -64,7 +64,9 @@ async def translate_file(input_file, src_lang, dest_lang, cancellation_token, lo
 
 async def translate_folder(folder_path, src_lang, dest_lang, cancellation_token, log_queue, progress_bar):
     """Translates all Excel files within a specified folder asynchronously."""
-    excel_files = [file for file in Path(folder_path).rglob('*.xlsx') or Path(folder_path).rglob('*.xlsm')]
+    excel_files = [file for file in Path(folder_path).rglob('*.xlsx')] + [file for file in Path(folder_path).rglob('*.xlsm')]
+    excel_files = list(set(excel_files))
+    
     logging.debug(f"files retrieved: {excel_files}")
     tasks = []
     file_paths = []

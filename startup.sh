@@ -38,11 +38,11 @@ source xlsm-trans-env/bin/activate
 
 # Install libraries from requirements.txt
 echo "Installing libraries from requirements.txt..."
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 # Run Streamlit app
 echo "Running Streamlit app..."
-python ./src/run.py
+python3 ./src/run.py
 
 # Deactivate virtual environment (optional)
 # deactivate
